@@ -1552,7 +1552,7 @@
       e = _error;
       Log.debug("Creating output file " + file);
     }
-    return fs.writeFile(file, this.canvas.toBuffer(), function(err) {
+    return fs.writeFile(file, this.canvas.toBuffer('image/jpeg'), function(err) {
       Log.debug("Finished writing to " + file);
       if (callback) {
         return callback.call(this, err);
